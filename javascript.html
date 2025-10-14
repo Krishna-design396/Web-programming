@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript String and Math Functions</title>
+</head>
+<body>
+    <h1>Javascript String and Math Functions</h1>
+
+    <h2>Math Properties</h2>
+    <script>
+        document.writeln("Math.E = " + Math.E + "<br>");
+        document.writeln("Math.PI = " + Math.PI + "<br>");
+        document.writeln("Math.SQRT2 = " + Math.SQRT2 + "<br>");
+        document.writeln("Math.SQRT1_2 = " + Math.SQRT1_2 + "<br>");
+        document.writeln("Math.LN2 = " + Math.LN2 + "<br>");
+        document.writeln("Math.LN10 = " + Math.LN10 + "<br>");
+        document.writeln("Math.LOG2E = " + Math.LOG2E + "<br>");
+        document.writeln("Math.LOG10E = " + Math.LOG10E + "<br><br>");
+    </script>
+
+    <h2>Math Objects</h2>
+    <script>
+        let number = 7.52;
+        document.writeln("Number: " + number + "<br>");
+        document.writeln("Integer part: " + Math.floor(number) + "<br>");
+        document.writeln("Nearest integer: " + Math.round(number) + "<br>");
+        document.writeln("Square root: " + Math.sqrt(6.7).toFixed(15) + "<br>");
+
+        let nums = [4, 3, 7, -1];
+        document.writeln("Minimum value from (4, 3, 7, -1): " + Math.min(...nums) + "<br>");
+        document.writeln("Maximum value from (4, 3, 7, -1): " + Math.max(...nums) + "<br><br>");
+    </script>
+
+    <h2>String Methods</h2>
+    <script>
+        let nameStr = "Mohammed Mubarak";
+        document.writeln("String : " + nameStr + "<br>");
+        document.writeln("Length of string : " + nameStr.length + "<br>");
+        document.writeln("String in upper case : " + nameStr.toUpperCase() + "<br>");
+        document.writeln("String in lower case : " + nameStr.toLowerCase() + "<br>");
+
+        let joinedString = nameStr.concat(" A P");
+        document.writeln("Join a String : " + joinedString + "<br>");
+
+        let replacedString = nameStr.replace("Mohammed", "Nehan");
+        document.writeln("Replace Mohammed in String : " + replacedString + "<br><br>");
+    </script>
+
+    <h2>String Objects </h2>
+    <script>
+        let str = "Krishnapriya santhosh";
+        document.writeln("String is: " + str + "<br>");
+        document.writeln("Length of the word is: " + str.length + "<br>");
+        document.writeln("In LowerCase: " + str.toLowerCase() + "<br>");
+        document.writeln("In UpperCase: " + str.toUpperCase() + "<br>");
+    </script>
+</body>
+</html>
+
+
+
+
