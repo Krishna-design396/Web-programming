@@ -4,19 +4,23 @@
   <title>Simple Registration Form</title>
   <script>
     function validateForm() {
+     
       var name = document.getElementById("name").value.trim();
       var email = document.getElementById("email").value.trim();
       var phone = document.getElementById("phone").value.trim();
+      var username = document.getElementById("username").value.trim();
       var password = document.getElementById("password").value.trim();
       var confirmPassword = document.getElementById("confirmPassword").value.trim();
 
-      // Name validation
+      
+
+      
       if (name === "") {
         alert("Please enter your name");
         return false;
       }
 
-      // Email validation
+     
       if (email === "") {
         alert("Please enter your email");
         return false;
@@ -28,7 +32,7 @@
         return false;
       }
 
-      // Phone validation
+      
       if (phone === "") {
         alert("Please enter your phone number");
         return false;
@@ -39,8 +43,18 @@
         alert("Please enter a valid phone number (10–15 digits, numbers only)");
         return false;
       }
+      
+       if (username === "") {
+        alert("Please enter a username");
+        return false;
+      }
+      var usernamePattern = /^[a-zA-Z0-9_]{4,20}$/;
+      if (!username.match(usernamePattern)) {
+        alert("Username must be 4–20 characters long and contain only letters, numbers, and underscores.");
+        return false;
+      }
 
-      // Password validation
+      
       if (password === "") {
         alert("Please enter a password");
         return false;
@@ -52,7 +66,7 @@
         return false;
       }
 
-      // Confirm Password validation
+     
       if (confirmPassword === "") {
         alert("Please confirm your password");
         return false;
@@ -71,12 +85,17 @@
 <body>
   <h2>Registration Form</h2>
   <form onsubmit="return validateForm()">
+
+    
     Name: <input type="text" id="name"><br><br>
     Email: <input type="text" id="email"><br><br>
     Phone: <input type="text" id="phone"><br><br>
+     Username: <input type="text" id="username"><br><br>
     Password: <input type="password" id="password"><br><br>
     Confirm Password: <input type="password" id="confirmPassword"><br><br>
+
     <input type="submit" value="Register">
+    
   </form>
 </body>
 </html>
